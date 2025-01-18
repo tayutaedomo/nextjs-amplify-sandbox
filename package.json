@@ -19,6 +19,7 @@
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.1.1",
     "@tanstack/react-table": "^8.20.6",
+    "aws-amplify": "^6.12.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
@@ -31,13 +32,20 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.13.0",
+    "@aws-amplify/backend-cli": "^1.4.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "aws-cdk": "^2.176.0",
+    "aws-cdk-lib": "^2.176.0",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.24.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.23",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
   }
 }
