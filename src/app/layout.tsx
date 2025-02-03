@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import localFont from "next/font/local"
 
 import "./globals.css"
+import { GoogleTagManager } from "@next/third-parties/google"
+
 import Header from "./components/header"
 
 const geistSans = localFont({
@@ -25,8 +27,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const gtmId: string = process.env.NEXT_PUBLIC_GTM_ID || ""
+
   return (
     <html lang="en">
+      <GoogleTagManager gtmId={gtmId} />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
