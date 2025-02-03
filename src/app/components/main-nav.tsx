@@ -12,28 +12,28 @@ export function MainNav({
       {...props}
     >
       <Link
-        href="/examples/dashboard"
+        href="/"
         className="hover:text-primary text-sm font-medium transition-colors"
       >
-        Overview
+        Home
       </Link>
       <Link
-        href="/examples/dashboard"
+        href="/shadcn"
         className="text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
       >
-        Customers
+        shadcn
       </Link>
       <Link
-        href="/examples/dashboard"
+        href="/shadcn-tasks"
         className="text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
       >
-        Products
+        shadcn-tasks
       </Link>
       <Link
-        href="/examples/dashboard"
+        href="/vaul"
         className="text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
       >
-        Settings
+        vaul
       </Link>
     </nav>
   )

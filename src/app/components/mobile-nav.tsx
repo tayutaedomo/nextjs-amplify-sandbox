@@ -21,12 +21,16 @@ export const docsConfig = {
       href: "/",
     },
     {
-      title: "Documentation",
-      href: "/docs",
+      title: "shadcn",
+      href: "/shadcn",
     },
     {
-      title: "Components",
-      href: "/docs/components/accordion",
+      title: "Tasks",
+      href: "/shadcn-tasks",
+    },
+    {
+      title: "vaul",
+      href: "/vaul",
     },
   ],
 }
@@ -74,8 +78,10 @@ export function MobileNav() {
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
         <div className="overflow-auto p-6">
-          <DrawerTitle>Menu</DrawerTitle>
-          <DrawerDescription>Mobile Navigation Menu</DrawerDescription>
+          <DrawerTitle className="hidden">Menu</DrawerTitle>
+          <DrawerDescription className="hidden">
+            Mobile Navigation Menu
+          </DrawerDescription>
           <div className="flex flex-col space-y-3">
             {docsConfig.mainNav?.map(
               (item) =>
