@@ -1,12 +1,28 @@
 import ClientComponent from "./components/client-counter"
+import ClientPosts from "./components/client-posts"
+import { Post } from "./types"
 
-export default function SsrClientPage() {
+async function fetchPosts(): Promise<Post[]> {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts")
+  const data = (await res.json()) as Post[]
+  return data
+}
+
+export default async function SsrClientPage() {
   const currentTime = new Date().toLocaleTimeString()
+  const posts = await fetchPosts()
 
   return (
-    <div className="my-4">
+    <div className="p-4">
       <h1>Current Time: {currentTime}</h1>
-      <ClientComponent />
+
+      <div className="my-2">
+        <ClientComponent />
+      </div>
+
+      <div className="my-2">
+        <ClientPosts posts={posts} />
+      </div>
     </div>
   )
 }
